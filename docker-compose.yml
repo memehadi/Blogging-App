@@ -18,6 +18,12 @@ services:
     environment:
       # REACT_APP_BACKEND_URL: "http://127.0.0.1:4567"
       REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+      # Aws amplify variables
+      REACT_APP_AWS_PROJECT_REGION: "${AWS_DEFAULT_REGION}"
+      REACT_APP_AWS_COGNITO_REGION: "${AWS_DEFAULT_REGION}"
+      REACT_APP_AWS_USER_POOLS_ID: "us-east-1_dQtB2dYFb"
+      REACT_APP_CLIENT_ID: "52h3c4u5nkdmt9k5v7fndhaln5"
+
     build: ./frontend-react-js
     ports:
       - "3000:3000"
