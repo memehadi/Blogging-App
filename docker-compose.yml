@@ -9,6 +9,9 @@ services:
       OTEL_SERVICE_NAME: "backend-flask"
       FRONTEND_URL: "https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
       BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+
+      AWS_COGNITO_USER_POOL_ID: "us-east-1_qd8wM6TIb"
+      AWS_COGNITO_USER_POOL_CLIENT_ID: "f1d6l6a61iku4mv8eroj9rtb"
     build: ./backend-flask
     ports:
       - "4567:4567"
