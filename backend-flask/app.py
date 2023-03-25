@@ -50,7 +50,7 @@ cors = CORS(
   app, 
   resources={r"/api/*": {"origins": origins}},
   headers=['Content-Type', 'Authorization'], 
-  allow_headers="content-type,if-modified-since",	  expose_headers='Authorization',
+  expose_headers='Authorization',
   methods="OPTIONS,GET,HEAD,POST"
 )
 
