@@ -1,9 +1,3 @@
-
-Filter changed files
- 44  
-aws/lambdas/cruddur-post-confirrmation.py
-Comment on this file
-@@ -0,0 +1,44 @@
 import json
 import psycopg2
 import os

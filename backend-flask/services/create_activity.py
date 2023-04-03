@@ -1,6 +1,7 @@
-import uuid
 from datetime import datetime, timedelta, timezone
+
 from lib.db import db
+
 class CreateActivity:
   def run(message, user_handle, ttl):
     model = {
@@ -43,13 +44,10 @@ class CreateActivity:
     else:
       expires_at = (now + ttl_offset)
       uuid = CreateActivity.create_activity(user_handle,message,expires_at)
+
       object_json = CreateActivity.query_object_activity(uuid)
       model['data'] = object_json
-
-      
     return model
-
-
 
   def create_activity(handle, message, expires_at):
     sql = db.template('activities','create')
@@ -59,10 +57,8 @@ class CreateActivity:
       'expires_at': expires_at
     })
     return uuid
-
   def query_object_activity(uuid):
     sql = db.template('activities','object')
     return db.query_object_json(sql,{
       'uuid': uuid
     })
-
