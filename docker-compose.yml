@@ -2,8 +2,9 @@ version: "3.8"
 services:
   backend-flask:
     environment:
-      # CONNECTION_URL: "postgresql://postgres:password@db:5432/cruddur"
-      CONNECTION_URL: "${PROD_CONNECTION_URL}"
+      AWS_ENDPOINT_URL: "http://dynamodb-local:8000"
+      CONNECTION_URL: "postgresql://postgres:password@db:5432/cruddur"
+      # CONNECTION_URL: "${PROD_CONNECTION_URL}"
       # FRONTEND_URL: "http://localhost:3000"
       # BACKEND_URL: "http://127.0.0.1:4567"
       OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
@@ -14,7 +15,7 @@ services:
       AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}"
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
       AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
-      AWS_COGNITO_USER_POOL_ID: "us-east-1_qd8wM6TIb"
+      AWS_COGNITO_USER_POOL_ID: "${AWS_COGNITO_USER_POOL_ID}"
       AWS_COGNITO_USER_POOL_CLIENT_ID: "f1d6l6a61iku4mv8eroj9rtb"
     build: ./backend-flask
     ports:
