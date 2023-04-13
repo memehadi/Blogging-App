@@ -31,9 +31,11 @@ class Ddb:
     print(query_params)
     # query the table
     response = client.query(**query_params)
+    print(f"response: {response}" , flush=True)
     items = response['Items']
-    
 
+    print(f"client: {client}" , flush=True)
+    print(f"item: {items}" , flush=True)
     results = []
     for item in items:
       last_sent_at = item['sk']['S']
@@ -44,6 +46,7 @@ class Ddb:
         'message': item['message']['S'],
         'created_at': last_sent_at
       })
+    print(f"Resut: {results}" , flush=True)
     return results
   def list_messages(client,message_group_uuid):
     year = str(datetime.now().year)
