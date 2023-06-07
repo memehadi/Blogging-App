@@ -23,7 +23,7 @@ docker build -t frontend-react-js ./frontend-react-js
 ```sh
 docker run -p 3000:3000 -d frontend-react-js
 ```
-### Alternatively, you can also use the Docker-Compose file
+### Alternatively, you can also use the Docker-Compose file in the root directory which also externally refrences to Postgres and DynamoDB local containers.
 ```sh
 docker compose up
 ```
