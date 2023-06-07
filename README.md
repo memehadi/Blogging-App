@@ -3,7 +3,7 @@
 This project is a containerized blogging web application hosted on AWS. Key Services include AWS Route53, AWS Certificate Manager, ALB, Cognito, RDS(PostgreSQL), DynamoDB, ECS Fargate, AWS Lambda, CloudWatch, AWS Systems Manager, AWS CodePipeline.
 The application has the following features implemented:
 * Authentification.
-* Blooging posts.
+* Blogging posts.
 * Direct messaging.<br />
 
 ## Installation
