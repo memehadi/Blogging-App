@@ -5,6 +5,8 @@ The application has the following features implemented:
 * Authentification.
 * Blogging posts.
 * Direct messaging.<br />
+<img src="./Assets/Asset1.png" width=800 height=450>
+<img src="./Assets/Asset2.png" width=800 height=450>
 
 ## Installation
 ### Build Backend
